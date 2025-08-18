@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <img  class="img-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="logo">3D-DEV</h1>
+
+            <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="nav-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <button class="btn-primary">Sign Up</button>
+        </header>
+
+
+        <main>
+        <div class="content">
+            <div class="tag-box">
+                <div class="tag">INTRODUCING &wedbar;</div>
+            </div>
+
+            <h1>BUILDING IDEAS TO LIFE IN 3D</h1>
+            <p class="description">Immersive 3D experiences, animations, and designs tailored for web, games, and virtual spaces.</p>
+          <div class="buttons">
+            <a href="#" class="btn-get-started">Documentation &gt;</a>
+            <a href="#" class="btn-signing-main">Get Started &gt;</a>
+          </div>
+        </div>
+        </main>
+
+ <spline-viewer class="robot-3d" url="https://prod.spline.design/O5FahMvBf5HRDq4D/scene.splinecode"></spline-viewer>
+        <!-- <spline-viewer class="robot-3d" url="https://prod.spline.design/b3DAoEbbgQ7Svyz1/scene.splinecode"></spline-viewer> -->
+    </div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script>
+   
+
+    
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script> -->
+
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.addEventListener('click', function() {
+        const isActive = hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      });
+    </script>
+
+</body>
+</html>
